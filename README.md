@@ -32,5 +32,11 @@ import mongodbPlugin from 'native-mongodb-plugin';
     //     insertedCount: 1,
     //     insertedId: 5b80f7a3a93fda51c1cee7ea
     // }    
+    // you can handle other databases
+    const db2 = await mongodbPlugin.createModule('mongodb://localhost2:27017/example'); 
+    const collection2 = db2.collection('hello');
+    const insertOne2 = await collection2.insertOne({
+        name: 'jaehunpark2'
+    }); 
 })()
 ```
