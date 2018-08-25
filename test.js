@@ -1,7 +1,7 @@
-import mongodb from './dist';
+import mongodbPlugin from './dist';
 
 ( async () => {
-    const db = await mongodb.createModule('mongodb://localhost:27017/example');
+    const db = await mongodbPlugin.createModule('mongodb://localhost:27017/example');
     const collection = db.collection('hello');
     const insertOne = await collection.insertOne({
         name: 'jaehunpark'
