@@ -10,7 +10,7 @@ set config in your package.json
 ...
 "dependencies": {
     ...
-    "mysql-queryhelper": "git+https://github.com/setyourmindpark/native-mongodb-plugin.git"
+    "native-mongodb-plugin": "git+https://github.com/setyourmindpark/native-mongodb-plugin.git"
     ...
   }
 ...
@@ -18,10 +18,10 @@ set config in your package.json
 
 ### EXAMPLE
 ``` javascript
-import mongodb from 'native-mongodb-plugin';
+import mongodbPlugin from 'native-mongodb-plugin';
 
 ( async () => {
-    const db = await mongodb.createModule('mongodb://localhost:27017/example');
+    const db = await mongodbPlugin.createModule('mongodb://localhost:27017/example');
     const collection = db.collection('hello');
     const insertOne = await collection.insertOne({
         name: 'jaehunpark'
